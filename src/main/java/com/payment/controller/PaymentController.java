@@ -35,9 +35,9 @@ public class PaymentController {
         return paymentService.updatePayment(payment);
     }
 
-    @RequestMapping(value = "/deletePayment", method = RequestMethod.DELETE)
-    public void deletePayment(@RequestBody Payment payment){
-        paymentService.deletePayment(payment);
+    @RequestMapping(value = "/deletePayment/{id}", method = RequestMethod.DELETE)
+    public void deletePayment(@PathVariable Integer id){
+        paymentService.deletePayment(id);
     }
 
 }
